@@ -2,7 +2,8 @@
 streamlit
 requests
 python-dotenv
-
+audio_extract 
+assemblyai
 # Video/audio processing
 moviepy
 imageio-ffmpeg
