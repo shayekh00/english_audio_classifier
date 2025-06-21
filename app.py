@@ -3,7 +3,7 @@ from assembly_accent import classify_accent
 import uuid
 import streamlit as st
 import os
-from langchain.llms import OpenAI
+# from langchain.llms import OpenAI
 from dotenv import load_dotenv
 from backend_logic import download_video, audio_extraction, download_loom_video, fetch_loom_download_url, extract_id
 
