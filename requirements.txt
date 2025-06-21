@@ -1,0 +1,11 @@
+# Core app
+streamlit
+requests
+python-dotenv
+
+# Video/audio processing
+moviepy
+imageio-ffmpeg
+
+# LLM (LangChain + OpenAI)
+openai
