@@ -4,11 +4,14 @@ import requests
 import time
 import os
 from dotenv import load_dotenv
+import streamlit as st
+
+
 load_dotenv()
 
 BASE_URL = "https://api.assemblyai.com"
-
-ASSEMBLYAI_API_KEY = os.getenv("ASSEMBLYAI_API_KEY")
+ASSEMBLYAI_API_KEY = st.secrets["ASSEMBLYAI_API_KEY"]
+# ASSEMBLYAI_API_KEY = os.getenv("ASSEMBLYAI_API_KEY")
 
 # print(f"Using AssemblyAI API Key: {ASSEMBLYAI_API_KEY}")
 HEADERS = {"authorization": ASSEMBLYAI_API_KEY}
