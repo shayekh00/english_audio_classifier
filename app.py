@@ -1,4 +1,4 @@
-from audio_extract.ffmpeg import extract_audio
+# from audio_extract.ffmpeg import extract_audio
 # from audio_extract import extract_audio
 
 from assembly_accent import classify_accent
