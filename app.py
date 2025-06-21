@@ -1,6 +1,3 @@
-from moviepy.video import VideoClip
-import moviepy
-from moviepy.video.io.VideoFileClip import VideoFileClip
 from audio_extract import extract_audio
 from assembly_accent import classify_accent
 import uuid
