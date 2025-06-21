@@ -2,6 +2,8 @@
 streamlit
 requests
 python-dotenv
+setuptools>=45
+imageio-ffmpeg
 audio_extract 
 assemblyai
 # Video/audio processing
