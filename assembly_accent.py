@@ -6,6 +6,7 @@ import os
 
 BASE_URL = "https://api.assemblyai.com"
 ASSEMBLYAI_API_KEY = os.getenv("ASSEMBLYAI_API_KEY")
+# print(f"Using AssemblyAI API Key: {ASSEMBLYAI_API_KEY}")
 HEADERS = {"authorization": ASSEMBLYAI_API_KEY}
 
 
