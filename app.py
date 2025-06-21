@@ -40,6 +40,7 @@ with st.form('my_form'):
             url = fetch_loom_download_url(id)
             filename = f"{uuid.uuid4()}.mp4"
             loom_filename = f"extracted_video/{filename}"
+            # loom_filename = f"{filename}"
             download_loom_video(url, loom_filename)
             
             # video_path = download_loom_video(text)
