@@ -13,4 +13,3 @@ imageio-ffmpeg
 # LLM (LangChain + OpenAI)
 openai
 langchain
-import ffmpeg
