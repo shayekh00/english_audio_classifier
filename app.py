@@ -30,28 +30,28 @@ with st.form('my_form'):
     submitted = st.form_submit_button('Submit')
     
 
-    if submitted and openai_api_key.startswith('sk-'):
-        with st.spinner("Processing..."):
-            st.write(f"Processing video URL: {text}")
-            if "loom.com" in text:
-                id = extract_id(text)
-                url = fetch_loom_download_url(id)
-                filename = f"{uuid.uuid4()}.mp4"
-                loom_filename = f"extracted_video/{filename}"
-                download_loom_video(url, loom_filename)
-                
-                # video_path = download_loom_video(text)
-            else:
-                filename = download_video(text)
 
-            if filename:
-                
-                audio_path = audio_extraction(filename)
-                if audio_path:
-                    st.write(f"Classifying accent from the audio...")
-                    accent, confidence, explanation = classify_accent(audio_path)
+    with st.spinner("Processing..."):
+        st.write(f"Processing video URL: {text}")
+        if "loom.com" in text:
+            id = extract_id(text)
+            url = fetch_loom_download_url(id)
+            filename = f"{uuid.uuid4()}.mp4"
+            loom_filename = f"extracted_video/{filename}"
+            download_loom_video(url, loom_filename)
+            
+            # video_path = download_loom_video(text)
+        else:
+            filename = download_video(text)
 
-                    st.success("✅ Analysis Complete")
-                    st.metric(label="Detected Accent", value=accent)
-                    st.metric(label="Confidence in English", value=f"{confidence}%")
-                    st.info(explanation)
+        if filename:
+            
+            audio_path = audio_extraction(filename)
+            if audio_path:
+                st.write(f"Classifying accent from the audio...")
+                accent, confidence, explanation = classify_accent(audio_path)
+
+                st.success("✅ Analysis Complete")
+                st.metric(label="Detected Accent", value=accent)
+                st.metric(label="Confidence in English", value=f"{confidence}%")
+                st.info(explanation)
